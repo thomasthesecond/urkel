@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Urkel by thomasthesecond</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Urkel</h1>
+        <p class="header">jQuery plugin for creating simple accordions</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/thomasthesecond/urkel/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/thomasthesecond/urkel/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/thomasthesecond/urkel">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/thomasthesecond">thomasthesecond</a></p>
+
+
+      </header>
+      <section>
+        <h1>jquery.urkel.js</h1>
+
+<p>Urkel is a jQuery plugin for creating simple accordions.</p>
+
+<h2>Default Usage</h2>
+
+<p>JavaScript:</p>
+
+<pre><code>$('.accordion').urkel();
+</code></pre>
+
+<p>HTML:</p>
+
+<pre><code>&lt;div class="accordion"&gt;
+
+    &lt;h3&gt;&lt;a href="#id1"&gt;Title&lt;/a&gt;&lt;/h3&gt;
+    &lt;div id="id1"&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;h3&gt;&lt;a href="#id2"&gt;Title&lt;/a&gt;&lt;/h3&gt;
+    &lt;div id="id2"&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<p>CSS:</p>
+
+<pre><code>h3.collapsed a:after{ content: "\25BC"; }
+h3.expanded a:after{ content: "\25B2"; }
+</code></pre>
+
+<h2>Custom Usage</h2>
+
+<p>JavaScript:</p>
+
+<pre><code>$('.accordion').urkel({
+    title : '.title',
+    title_closed_class : 'closed',
+    title_open_class : 'open',
+    content : '.content',
+    speed : 'fast'
+});
+</code></pre>
+
+<p>HTML:</p>
+
+<pre><code>&lt;div class="accordion"&gt;
+
+    &lt;div class="title"&gt;&lt;a href="#id1"&gt;Title&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="content" id="id1"&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="title"&gt;&lt;a href="#id2"&gt;Title&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="content" id="id2"&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<p>CSS:</p>
+
+<pre><code>.title.closed a:after{ content: "\25BC"; }
+.title.open a:after{ content: "\25B2"; }
+</code></pre>
+
+<h2>Options</h2>
+
+<h3>title</h3>
+
+<p>The HTML element to be used as the title. Examples: h3, .title</p>
+
+<p>Default value: h3</p>
+
+<hr><h3>title_closed_class</h3>
+
+<p>The class to be used on the <strong>title</strong> element when closed/collapsed. Simply a hook for styling.</p>
+
+<p>Default value: collapsed</p>
+
+<hr><h3>title_open_class</h3>
+
+<p>The class to be used on the <strong>title</strong> element when opened/expanded. Simply a hook for styling.</p>
+
+<p>Default value: expanded</p>
+
+<hr><h3>content</h3>
+
+<p>The HTML element to be used to wrap the content. Examples: div, .content</p>
+
+<p>Default value: div</p>
+
+<hr><h3>speed</h3>
+
+<p>The speed (in milliseconds) at which the accordion slides open/closed. You can also use the values 'fast' or 'slow'.</p>
+
+<p>Default value: 500</p>
+
+<h2>Demo</h2>
+
+<p><a href="https://github.com/thomasthesecond/urkel">View Urkel in action</a>.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
