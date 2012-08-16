@@ -104,4 +104,4 @@ Default value: 500
 
 ## Demo
 
-[View Urkel in action](https://github.com/thomasthesecond/urkel).
+[View Urkel in action](http://thomasthesecond.github.com/urkel).
