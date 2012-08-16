@@ -1,0 +1,27 @@
+html{ font-size: 100%; }
+html{ color: #333; font-family: "Arial", sans-serif; }
+body{ background: #fff; margin: 50px 0; }
+
+a{ color: darkblue; text-decoration: none; }
+a:visited{ color: darkblue; }
+a:hover{ color: blue; }
+.second a{ color: maroon; }
+.second a:visited{ color: maroon; }
+.second a:hover{ color: red; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+h1{ font-size: 48px; line-height: 1; margin: 0; }
+h3{ border-bottom: 1px dotted #aaa; font-size: 24px; line-height: 28px; margin: 0; overflow: hidden; }
+h3 a{ display: block; overflow: hidden; padding: 10px 0 8px; }
+h3 a:after{ font-size: 0.5em; float: right; }
+h3.collapsed a:after{ content: "\25BC"; }
+h3.expanded a:after{ content: "\25B2"; }
+p{ font-size: 14px; line-height: 20px; margin: 1em 0; }
+
+.container{ margin: 0 auto; position: relative; width: 600px; }
+.intro, .outro{ text-align: center; }
+.intro{ margin-bottom: 50px; text-align: center; }
+.outro{ margin-top: 50px; text-align: center; }
+.accordion{ border-top: 1px dotted #aaa; }
+.accordion div{ border-bottom: 1px dotted #aaa; padding-bottom: 2px; }
