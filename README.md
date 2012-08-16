@@ -35,9 +35,9 @@ JavaScript:
 
 	$('.accordion').urkel({
 		title : '.title',
-		closed_class : 'closed',
-		open_class : 'open',
-		content_wrapper : '.content',
+		title_closed_class : 'closed',
+		title_open_class : 'open',
+		content : '.content',
 		speed : 'fast'
 	});
 	
@@ -72,7 +72,7 @@ Default value: h3
 
 ---
 
-### closed_class
+### title_closed_class
 
 The class to be used on the **title** element when closed/collapsed. Simply a hook for styling.
 
@@ -80,7 +80,7 @@ Default value: collapsed
 
 ---
 
-### open_class
+### title_open_class
 
 The class to be used on the **title** element when opened/expanded. Simply a hook for styling.
 
@@ -88,7 +88,7 @@ Default value: expanded
 
 ---
 
-### content_wrapper
+### content
 
 The HTML element to be used to wrap the content. Examples: div, .content
 

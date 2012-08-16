@@ -3,34 +3,12 @@
  *
  * Copyright (c) 2012 Thomas Cunningham (http://thomasthesecond.com)
  *
- * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+ * Licensed under the MIT license.
+ * You're free to use this plugin as you wish, but please leave this comment block intact.
  *
- * Project home: 
+ * Project home: https://github.com/thomasthesecond/urkel
  *
  * Version: 1.0
- *
- */
-
-/* Sample markup:
- *
- * <div class="accordion">
- *	 <h3><a href="#id">Title</a></h3>
- *	 <div id="id"><p>...</p></div>
- * </div>
- *
- */
-
-/* Usage:
- *
- * $('.accordion').urkel();
- *
- * $('.accordion').urkel({
- * 		title : 'h3',
- * 		closed_class : 'collapsed',
- * 		open_class : 'expanded',
- * 		content_wrapper : 'div',
- * 		speed : 500
- * });
  *
  */
 
@@ -42,9 +20,9 @@
 		var settings = $.extend({
 
 			'title' : 'h3',
-			'closed_class' : 'collapsed',
-			'open_class' : 'expanded',
-			'content_wrapper' : 'div',
+			'title_title_closed_class' : 'collapsed',
+			'title_title_open_class' : 'expanded',
+			'content' : 'div',
 			'speed' : 500
 
 		}, options);
@@ -53,13 +31,13 @@
 		var element = this.selector; // .accordion
 
 		// Set the content element
-		var content = element + ' > ' + settings['content_wrapper']; // .accordion > div
+		var content = element + ' > ' + settings['content']; // .accordion > div
 
 		// For each accordion...
 		$(element).each(function(){
 
 			// add the closed class to the title element...
-			$(settings['title']).addClass(settings['closed_class']); // h3.collapsed
+			$(settings['title']).addClass(settings['title_closed_class']); // h3.collapsed
 
 			// and hide the content elements
 			$(content).css('display', 'none'); // .accordion > div
@@ -79,15 +57,15 @@
 			$(this).click(function(){
 
 				// Toggle between closed class and open class on all siblings of the targeted element's parent title element
-				$(this).parent(settings['title']).toggleClass(settings['closed_class']).toggleClass(settings['open_class']).siblings(settings['title']);
+				$(this).parent(settings['title']).toggleClass(settings['title_closed_class']).toggleClass(settings['title_open_class']).siblings(settings['title']);
 
 				// If the title element has the open class, remove it and add the closed class
-				if ($(this).parent(settings['title']).siblings(settings['title']).hasClass(settings['open_class'])){
-					$(this).parent(settings['title']).siblings(settings['title']).removeClass(settings['open_class']).addClass(settings['closed_class']);
+				if ($(this).parent(settings['title']).siblings(settings['title']).hasClass(settings['title_open_class'])){
+					$(this).parent(settings['title']).siblings(settings['title']).removeClass(settings['title_open_class']).addClass(settings['title_closed_class']);
 				}
 
 				// Show the targeted element content and hide all others
-				$(content + href).slideToggle(settings['speed']).siblings(settings['content_wrapper']).slideUp(settings['speed']);
+				$(content + href).slideToggle(settings['speed']).siblings(settings['content']).slideUp(settings['speed']);
 
 				return false;
 
