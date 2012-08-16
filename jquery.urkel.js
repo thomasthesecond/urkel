@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  * You're free to use this plugin as you wish, but please leave this comment block intact.
  *
- * Project home: https://github.com/thomasthesecond/urkel
+ * Project home: http://thomasthesecond.github.com/urkel
  *
  * Version: 1.0
  *
@@ -20,8 +20,8 @@
 		var settings = $.extend({
 
 			'title' : 'h3',
-			'title_title_closed_class' : 'collapsed',
-			'title_title_open_class' : 'expanded',
+			'title_closed_class' : 'collapsed',
+			'title_open_class' : 'expanded',
 			'content' : 'div',
 			'speed' : 500
 
