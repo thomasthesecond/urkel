@@ -1,14 +1,13 @@
 /*
  * Urkel - jQuery plugin for creating simple accordions - http://youtu.be/G9aj4PTEl6Q :)
  *
- * Copyright (c) 2012 Thomas Cunningham (http://thomasthesecond.com)
+ * Copyright (c) 2012-2013 Thomas Cunningham (http://thomasthesecond.com)
  *
- * Licensed under the MIT license.
- * You're free to use this plugin as you wish, but please leave this comment block intact.
+ * Use this plugin however you please. However, please don't redistribute without giving proper credit.
  *
  * Project home: http://thomasthesecond.github.com/urkel
  *
- * Version: 1.0
+ * Version: 1.1
  *
  */
 
@@ -19,6 +18,7 @@
 		// Default settings
 		var settings = $.extend({
 
+			'accordion' : true,
 			'title' : 'h3',
 			'title_closed_class' : 'collapsed',
 			'title_open_class' : 'expanded',
@@ -29,6 +29,9 @@
 
 		// First, get the accordion element
 		var element = this.selector; // .accordion
+
+		// Find out if this is an accordion
+		var accordion = settings['accordion'];
 
 		// Set the content element
 		var content = element + ' > ' + settings['content']; // .accordion > div
@@ -65,7 +68,17 @@
 				}
 
 				// Show the targeted element content and hide all others
-				$(content + href).slideToggle(settings['speed']).siblings(settings['content']).slideUp(settings['speed']);
+				function accordionTrue(){
+					$(content + href).slideToggle(settings['speed']).siblings(settings['content']).slideUp(settings['speed']);
+				}
+
+				// Show the targeted element content but do not hide all others
+				function accordionFalse(){
+					$(content + href).slideToggle(settings['speed']);
+				}
+
+				// Find out if this is an accordion
+				var returnAccordion = (accordion == true) ? accordionTrue() : accordionFalse();
 
 				return false;
 
