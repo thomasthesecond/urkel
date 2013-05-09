@@ -53,8 +53,6 @@
 			content = element + ' > ' + settings['container_element'] + ' > ' + settings['content']; // .accordion > [element] > div
 		}
 
-		// var returnContentElement = (accordion == true) ? accordionTrue() : accordionFalse();
-
 		// For each accordion element...
 		$(element).each(function()
 		{
